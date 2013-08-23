@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<sitemesh>
+
+  <mapping path="/*" decorator="/skins/transparentia/index.jsp"/>
+
+  <mapping path="/template/index.html" exclude="true"/>
+
+</sitemesh>

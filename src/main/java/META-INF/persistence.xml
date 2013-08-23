@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+   <!-- GlassFish -->
+   <persistence-unit name="contestPU" transaction-type="JTA">
+      <jta-data-source>jdbc/contest-postgresql</jta-data-source>
+   </persistence-unit>
+
+   <!-- TOMCAT
+   <persistence-unit name="contestPU" transaction-type="RESOURCE_LOCAL">
+      <provider>org.hibernate.ejb.HibernatePersistence</provider>
+      <non-jta-data-source>java:/comp/env/jdbc/contest-postgresql</non-jta-data-source>
+   </persistence-unit>
+   -->
+
+   <!-- DESKTOP
+   <persistence-unit name="contestPU" transaction-type="RESOURCE_LOCAL">
+      <provider>org.hibernate.ejb.HibernatePersistence</provider>
+      <properties>
+         <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/contest" />
+         <property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+         <property name="hibernate.connection.username" value="contest" />
+         <property name="hibernate.connection.password" value="ContEst@" />
+         <property name="hibernate.show_sql" value="false" />
+         <property name="hibernate.format_sql" value="true" />
+      </properties>
+   </persistence-unit>
+   -->
+</persistence>

@@ -1,0 +1,149 @@
+span.listagemNoResult {
+    background-color: #eee;
+    color: #367EA6;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    width: 250px;
+    border: 1px solid #367EA6;
+}
+
+table.listagemTopo {
+    padding: 0px;
+    margin-top: 10px;
+    margin-left: 2%;
+    margin-right: 3%;
+    margin-bottom: -2px;
+    width: 93%;
+    border: 0px;
+}
+
+table.listagemTopo td.listagemTopoNull {
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+table.listagemTopo td.listagemTopoMsg {
+    background-color: #FFFFFF;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    border: 1px solid #367EA6;
+    border-bottom: 0px;
+    line-height: 16px;
+    white-space: nowrap;
+}
+
+table.listagemTopo td.listagemTopoLinks {
+    background-color: #FFFFFF;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    border: 1px solid #367EA6;
+    border-bottom: 0px;
+    border-left: 0px;
+    line-height: 16px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+table.listagemTopo td.listagemTopoLinks img {
+    vertical-align: bottom;
+}
+
+table.listagemTopo td.listagemTopoLinks img.off {
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    -moz-opacity: 0.3;
+}
+
+table.listagem {
+    width: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 20px;
+    border: 1px solid #367EA6;
+    background-color: #FFFFFF;
+}
+
+table.listagem th {
+    background-color: #367EA6;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 2px;
+    text-align: left;
+    border: 0px;
+}
+
+table.listagem th.img, table.listagem th.centralizado {
+    text-align: center;
+}
+
+table.listagem th.sorted {
+    background-color: #B2BBBE;
+}
+
+table.listagem th.sorted a, table.listagem th.sortable a {
+    background-position: right;
+    display: block;
+    width: 100%;
+    color: #FFFFFF;
+}
+
+table.listagem th.sortable a {
+    background-image: url(../images/arrow_off.png);
+    background-repeat: no-repeat;
+}
+
+table.listagem th.order1 a {
+    background-image: url(../images/arrow_down.png);
+    background-repeat: no-repeat;
+}
+
+table.listagem th.order2 a {
+    background-image: url(../images/arrow_up.png);
+    background-repeat: no-repeat;
+}
+
+table.listagem td {
+    padding: 2px;
+    text-align: left;
+}
+
+table.listagem td a {
+    color: #666666;
+}
+
+table.listagem td.img, table.listagem td.centralizado {
+    padding: 2px;
+    text-align: center;
+}
+
+table.listagem td.num {
+    padding: 2px;
+    text-align: right;
+}
+
+table.listagem tr.odd {
+    background-color: #fff;
+}
+
+table.listagem tr.even, table.listagem tr.tableRowEven {
+    background-color: #ddd;
+}
+
+table.listagem tr.total {
+    font-weight: bold;
+    padding: 4px;
+}
+
+table.listagem tr.total td {
+    border-top: 1px solid #367EA6;
+    text-align: right;
+}

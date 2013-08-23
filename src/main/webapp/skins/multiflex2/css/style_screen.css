@@ -1,0 +1,355 @@
+/*************************************************************/
+/*   Design:  MultiFlex-2 (Screen)                           */
+/*   Author:  Wolfgang                                       */
+/*   Web:     www.1-2-3-4.info                               */
+/*   Date:    June 8, 2006                                   */
+/*************************************************************/
+
+/*************************/
+/* SECTION 1 - MAIN BODY */
+/*************************/
+a {
+	color: rgb(88, 144, 168);
+}
+
+a:hover {
+	color: #06F;
+}
+
+body {
+	font-size: 80%;
+	color: rgb(88, 144, 168);
+	margin: 0px auto;
+	padding: 0px;
+	background: url(../img/background_body_grey.gif) top center repeat-y;
+	font-family: arial, sans-serif;
+}
+
+h1,h2,h3 {
+	color: rgb(88, 144, 168);
+}
+
+h1 {
+	overflow: hidden;
+	width: 862px;
+	margin: 0px 0px 10px 0px;
+	padding: 0px 0px 2px 0px;
+	border-bottom: solid 3px rgb(88, 144, 168);
+	color: rgb(88, 144, 168);
+	font-weight: bold;
+	font-size: 130%;
+}
+
+cite {
+	margin: 0;
+	height: 25px;
+	background: url(../../../template/images/star.png) no-repeat;
+	padding-left: 23px;
+	color: rgb(88, 144, 168);
+	font-weight: bold;
+	font-size: 110%;
+	display: block;
+}
+
+.page-container-2 {
+	width: 1100px;
+	margin: 0px auto;
+	padding: 0px;
+	background: url(../img/background_layout_2.gif) top left repeat-y;
+	border: solid 1px rgb(100, 100, 100);
+}
+
+/*************************************/
+/* SECTION 2 - header-AND NAVIGATION */
+/*************************************/
+
+/*-----------------------------------*/
+/* 2.1 - Sitename, slogan and banner */
+/*-----------------------------------*/
+.site-name {
+	/* width: 300px; */
+	height: 45px;
+	top: 8px;
+	position: absolute;
+	z-index: 4;
+	overflow: hidden;
+	margin: 0px;
+	padding-left: 65px;
+	color: rgb(69, 140, 204);
+}
+
+.site-name p.title {
+	margin: 0px;
+	padding: 0px;
+	font-family: "trebuchet ms", arial, sans serif;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.site-name p.subtitle {
+	clear: both;
+	/* width: 300px; */
+	margin: -6px 0px 0px 0px;
+	padding: 0px;
+	background-color: transparent;
+	font-family: "trebuchet ms", arial, sans serif;
+	font-size: 12px;
+}
+
+.site-name a {
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+	color: rgb(88, 144, 168);
+}
+
+.site-name a:hover {
+	text-decoration: none;
+}
+
+.site-slogan-container {
+	width: 1080px;
+	height: 130px;
+	top: 100px;
+	position: absolute;
+	z-index: 1;
+	overflow: hidden;
+	margin: 0px;
+	padding-right: 15px;
+	background-color: transparent;
+}
+
+.site-slogan {
+	float: right;
+	width: 700px;
+	margin: 0px;
+	padding: 0px;
+	background-color: transparent;
+	font-size: 10px;
+}
+
+.site-slogan p.title {
+	float: right;
+	width: 700px;
+	margin: 0px;
+	padding: 0px;
+	color: rgb(234, 239, 247);
+	font-family: arial, sans serif;
+	text-align: right;
+	font-weight: bold;
+	font-size: 220%;
+}
+
+.site-slogan p.subtitle {
+	clear: both;
+	float: right;
+	width: 700px;
+	margin: -5px 0px 0px 0px;
+	padding: 0px;
+	color: rgb(234, 239, 247);
+	font-family: arial, sans serif;
+	text-align: right;
+	font-weight: bold;
+	font-size: 200%;
+}
+
+.site-slogan p.text {
+	clear: both;
+	float: right;
+	width: 700px;
+	margin: 10px 0px 0px 0px;
+	padding: 0px;
+	color: rgb(234, 239, 247);
+	font-family: arial, sans serif;
+	text-align: right;
+	font-weight: bold;
+	line-height: 1.0em;
+	font-size: 140%;
+}
+
+.site-slogan p.readmore {
+	clear: both;
+	float: right;
+	width: 700px;
+	margin: 10px 0px 0px 0px;
+	padding: 0px;
+	color: rgb(234, 239, 247);
+	font-family: arial, sans serif;
+	text-align: right;
+	font-weight: bold;
+	line-height: 1.0em;
+	font-size: 120%;
+}
+
+.site-slogan a {
+	color: rgb(234, 239, 247);
+	text-decoration: underline;
+}
+
+.site-slogan a:hover {
+	text-decoration: none;
+	color: rgb(50, 50, 50);
+}
+
+.img-header- {
+	clear: both;
+	float: left;
+	width: 1100px;
+	height: 250px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/*----------------------------*/
+/* 2.4 - Navigation - Level 2 */
+/*----------------------------*/
+.nav2 {
+	clear: both;
+	margin: 0px;
+	padding: 0px;
+	font-family: verdana, arial, sans serif;
+	font-size: 1.0em;
+}
+
+.nav2 ul {
+	float: left;
+	width: 1100px;
+	margin: 0px;
+	padding: 0px;
+	border-top: solid 1px rgb(54, 83, 151);
+	border-bottom: solid 1px rgb(54, 83, 151);
+	background-color: rgb(127, 162, 202);
+	font-weight: bold;
+}
+
+.nav2 li {
+	display: inline;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.nav2 li a {
+	display: block;
+	float: left;
+	margin: 0px 0px 0px 0px;
+	padding: 5px 10px 5px 10px;
+	border-right: solid 1px rgb(54, 83, 151);
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 100%;
+}
+
+.nav2 a:hover,.nav2 a.selected {
+	color: rgb(50, 50, 50);
+	text-decoration: none;
+}
+
+/*----------------------------*/
+/* 2.5 - Navigation - Level 3 */
+/*----------------------------*/
+.nav3 {
+	overflow: hidden;
+	clear: both;
+	float: left;
+	width: 208px;
+	min-height: 300px;
+	margin-left: 10px;
+	padding: 0px;
+	color: rgb(75, 75, 75);
+	font-size: 1.0em;
+}
+
+.nav3 ul {
+	width: 220px;
+	margin: 0px 0px 20px 0px;
+	padding: 0px;
+	border-bottom: solid 1px rgb(216, 206, 159);
+	background-color: rgb(219, 230, 241);
+}
+
+.nav3 li {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.nav3 h1 {
+	margin: 0px 0px 0px 0px;
+	padding: 3px 5px 2px 15px;
+	background-color: rgb(156, 186, 214);
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 100%;
+}
+
+.nav3 li a {
+	display: block;
+	min-height: 1.7em;
+	height: auto !important;
+	height: 1.7em;
+	line-height: 1.7em;
+	margin: 0px;
+	padding: 0px 7px 0px 15px;
+	border-top: solid 1px rgb(200, 200, 200);
+	border-left: solid 7px rgb(219, 230, 241);
+	color: rgb(75, 75, 75);
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 100%;
+}
+
+.nav3 li a:hover,.nav3 li a.selected {
+	border-left: solid 7px rgb(156, 186, 214);
+	color: rgb(150, 150, 150);
+	text-decoration: none;
+}
+
+/************************************************/
+/* SECTION 4 - SPECIFIC CLASSES FOR LAYOUTS #2  */
+/************************************************/
+.content2 {
+	float: left;
+	width: 855px;
+	min-height: 300px;
+	margin-top: 5px;
+	padding: 0px 0px 0px 20px;
+	color: rgb(75, 75, 75);
+	font-size: 1.0em;
+}
+
+/*--------------------*/
+/* 6.3 - Footer Area  */
+/*--------------------*/
+.footer {
+	overflow: hidden;
+	clear: both;
+	width: 1100px;
+	height: 3.0em;
+	margin: 0px;
+	padding: 0.5em 0px 0.5em 0px;
+	border-top: solid 1px rgb(125, 125, 125);
+	background-color: rgb(128, 161, 202);
+	color: rgb(255, 255, 255);
+	font-size: 1.0em;
+}
+
+.footer p {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	line-height: 1.3em;
+	font-size: 100%;
+}
+
+.footer a {
+	color: rgb(255, 255, 255);
+	text-decoration: underline;
+}
+
+.footer a:hover {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}

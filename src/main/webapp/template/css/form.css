@@ -1,0 +1,64 @@
+li {
+   list-style-type: none;
+}
+
+td.label {
+	text-align: right;
+	height: 28px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 5px;
+}
+
+table.form {
+    width: 100%;
+}
+
+td.barrabotao {
+	text-align: center;
+	width: 100%;
+}
+
+.error {
+	color: #990000;
+	font-weight: bold;
+	background-color: #FFF0F0;
+}
+
+textarea.text:hover {
+	border: 1px solid #eee;
+	background: #FFFFF4;
+	color: #000;
+}
+
+input.text {
+	margin: 0;
+	width: 110px;
+	border: 1px solid #546078;
+	background: #FFF;
+	color: #808080;
+}
+
+input.text:hover {
+	border: 1px solid #3a4354;
+}
+
+input.field,textarea.field,select.field {
+	border: 1px solid #aaa;
+	background-color: #FFFFFF;
+	color: #000;
+}
+
+input.field:hover,textarea.field:hover,select.field:hover {
+	border: 1px solid #000;
+	background: #eee;
+	color: #000;
+}
+
+input.button {
+	background: #eee;
+	color: #000000;
+	border: 2px solid #CCC;
+	padding: 1px;
+	width: 120px;
+}

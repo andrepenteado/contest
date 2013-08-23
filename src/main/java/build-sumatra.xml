@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<project name="Contest" default="compilar" basedir="../">
+
+    <property name="fontes" value="src" />
+    <property name="classes" value="web/WEB-INF/classes" />
+    <property name="lib" value="web/WEB-INF/lib" />
+    <property name="servlet-api.jar" value="/home/cpbauruc/tomcat/lib/servlet-api.jar" />
+
+    <path id="classpath.compilar">
+        <fileset dir="${lib}">
+            <include name="**/*.jar" />
+            <include name="**/*.zip" />
+        </fileset>
+        <pathelement location="${servlet-api.jar}" />
+    </path>
+
+    <target name="compilar">
+        <mkdir dir="${classes}" />
+
+        <javac srcdir="${fontes}" destdir="${classes}" debug="on" encoding="ISO-8859-1">
+            <classpath refid="classpath.compilar" />
+        </javac>
+
+        <copy todir="${classes}" encoding="ISO-8859-1">
+            <fileset dir="${fontes}">
+                <include name="**/*xml" />
+                <include name="**/*properties" />
+            </fileset>
+        </copy>
+    </target>
+
+</project>

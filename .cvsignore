@@ -1,0 +1,8 @@
+build.xml
+nbproject
+build
+dist
+.project
+.settings
+.classpath
+target
