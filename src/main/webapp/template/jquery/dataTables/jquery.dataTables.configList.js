@@ -15,7 +15,7 @@
     "sInfoPostFix":    "",
     "sSearch":         "Filtrar:",
     "sLoadingRecords": "Carregando resultados...",
-    "sUrl":            "",
+    "sUrl":            ""
 },
 "oColVis": {
     "buttonText": "<span class=\"ui-icon ui-icon-plusthick\" style=\"float: left\"></span><font size=\"2\">Colunas&nbsp;</font>",
