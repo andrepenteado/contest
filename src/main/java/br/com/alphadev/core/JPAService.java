@@ -173,7 +173,7 @@ public abstract class JPAService implements Service {
     @Override
     public <T> T findByPK(final Class<T> entityClass, final Long id) {
         T result = (T)getManager().find(entityClass, Long.valueOf(id));
-        if (getManager().contains(result)) {
+        if (result != null && getManager().contains(result)) {
             getManager().refresh(result);
         }
         log.debug("Buscar entidade " + entityClass.getName() + " pelo ID " + id);
@@ -192,10 +192,10 @@ public abstract class JPAService implements Service {
      */
     @Override
     public <T> T findByField(final Class<T> entityClass, final String name, final Object value) {
-        StringBuilder query = new StringBuilder("FROM ");
-        query.append(entityClass.getName());
+        StringBuilder query = new StringBuilder("SELECT entity FROM ");
+        query.append(entityClass.getName()).append(" entity ");
         query.append(" WHERE ");
-        query.append(name);
+        query.append("entity.").append(name);
         query.append(" = :pParam");
 
         log.debug("Buscar entidade " + entityClass.getName() + " por campo: " + query.toString());

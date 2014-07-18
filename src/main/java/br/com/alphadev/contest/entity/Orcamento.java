@@ -40,7 +40,7 @@ public class Orcamento extends BasicEntity<Orcamento> implements Serializable {
     private Long id;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_venda")
+    @JoinColumn(name = "id_venda", insertable = false, updatable = false)
     private Venda venda;
 
     @Column(name = "emissao")

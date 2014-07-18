@@ -43,7 +43,7 @@ public class NotaFiscal extends BasicEntity<NotaFiscal> implements Serializable 
     private Long id;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_venda")
+    @JoinColumn(name = "id_venda", insertable = false, updatable = false)
     private Venda venda;
 
     @Column(name = "numero")

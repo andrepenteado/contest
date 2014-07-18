@@ -36,7 +36,7 @@ public class Configuracao extends BasicEntity<Configuracao> implements Serializa
     private Long id;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_empresa")
+    @JoinColumn(name = "id_empresa", insertable = false, updatable = false)
     private Empresa empresa;
 
     @Column(name = "situacao_nfe")
