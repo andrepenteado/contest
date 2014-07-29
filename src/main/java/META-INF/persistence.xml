@@ -3,6 +3,7 @@
    <!-- GlassFish -->
    <persistence-unit name="contestPU" transaction-type="JTA">
       <jta-data-source>jdbc/contest-postgresql</jta-data-source>
+      <shared-cache-mode>NONE</shared-cache-mode>
    </persistence-unit>
 
    <!-- TOMCAT
