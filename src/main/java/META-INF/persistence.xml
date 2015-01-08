@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+<persistence version="2.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" 
+    xmlns="http://java.sun.com/xml/ns/persistence">
 
-   <!-- Tomcat via JNDI -->
-   <persistence-unit name="br.com.alphadev.core.Connection:Tomcat" transaction-type="RESOURCE_LOCAL">
+   <!-- Tomcat via JNDI
+   <persistence-unit name="br.com.alphadev.core.Connection" transaction-type="RESOURCE_LOCAL">
       <non-jta-data-source>java:/comp/env/jdbc/contest-postgresql</non-jta-data-source>
    </persistence-unit>
+   -->
 
    <!-- DESKTOP -->
    <persistence-unit name="br.com.alphadev.core.Connection" transaction-type="RESOURCE_LOCAL">

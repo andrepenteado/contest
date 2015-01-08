@@ -15,6 +15,6 @@ public class SettingsConfig {
 
     public static final String K_CAMINHO_JSPs = "/WEB-INF/jsp";
 
-    public static final String K_CONNECTION = "br.com.alphadev.core.Connection:Tomcat";
+    public static final String K_CONNECTION = "br.com.alphadev.core.Connection";
 
 }
