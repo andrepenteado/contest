@@ -12,7 +12,7 @@ import br.com.alphadev.util.UsuarioLogadoWrapper;
 
 public class Connection {
 
-    @PersistenceContext(unitName = SettingsConfig.K_CONTEST_PU)
+    @PersistenceContext(unitName = SettingsConfig.K_CONNECTION)
     private EntityManager em;
 
     private Service service;
@@ -38,7 +38,7 @@ public class Connection {
 
             if (this.em == null) {
                 try {
-                    this.em = (EntityManager)new InitialContext().lookup("java:/comp/env/" + SettingsConfig.K_CONTEST_PU);
+                    this.em = (EntityManager)new InitialContext().lookup("java:/comp/env/" + SettingsConfig.K_CONNECTION);
                 }
                 catch (Exception ex) {
                 }

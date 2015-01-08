@@ -13,7 +13,7 @@ import br.com.alphadev.util.SettingsConfig;
 public class ApplicationService extends JPAService {
 
     private static final Log4jWrapper log = new Log4jWrapper(ApplicationService.class, null);
-    private static final EntityManagerFactory factory = Persistence.createEntityManagerFactory(SettingsConfig.K_CONTEST_PU);
+    private static final EntityManagerFactory factory = Persistence.createEntityManagerFactory(SettingsConfig.K_CONNECTION);
     private static final ThreadLocal<EntityManager> managerLocal = new ThreadLocal<EntityManager>();
     private static final ThreadLocal<EntityTransaction> transactionLocal = new ThreadLocal<EntityTransaction>();
 

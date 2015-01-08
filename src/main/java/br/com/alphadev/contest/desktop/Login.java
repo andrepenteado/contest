@@ -37,7 +37,7 @@ public class Login extends javax.swing.JFrame {
 
     /** Creates new form Login */
     public Login() {
-        System.setProperty(SettingsConfig.K_PROPRIEDADE_ROOT_CLASSPATH, FunctionsHelper.getRootClassPath(Desktop.class));
+        System.setProperty(SettingsConfig.K_PROPRIEDADE_ROOT_CLASSPATH, FunctionsHelper.getRootClassPath(Login.class));
         ConfigHelper.load();
         Log4jWrapper.initConfig();
         new ApplicationService();
