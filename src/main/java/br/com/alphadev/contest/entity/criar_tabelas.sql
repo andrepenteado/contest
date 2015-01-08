@@ -526,6 +526,7 @@ CREATE TABLE item_venda (
    id_produto  INTEGER       NOT NULL,
    quantidade  INTEGER       NOT NULL,
    valor_venda NUMERIC(11,2) NOT NULL,
+   comissao    NUMERIC(5,2) NOT NULL,
    id_cfop     INTEGER       NULL
 );
 

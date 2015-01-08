@@ -43,7 +43,7 @@ public class VendaFilter<T> extends BasicFilter {
 
     private long numeroVenda;
 
-    private Boolean cancelada = new Boolean(false);
+    private Boolean cancelada;
 
     @Override
     public void setParameters(Object[] params) {
