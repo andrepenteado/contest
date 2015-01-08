@@ -36,8 +36,13 @@ public class Connection {
             if (this.service != null)
                 return this.service;
 
-            if (this.em == null)
-                this.em = (EntityManager)new InitialContext().lookup("java:comp/env/" + SettingsConfig.K_CONTEST_PU);
+            if (this.em == null) {
+                try {
+                    this.em = (EntityManager)new InitialContext().lookup("java:/comp/env/" + SettingsConfig.K_CONTEST_PU);
+                }
+                catch (Exception ex) {
+                }
+            }
 
             if (this.em != null)
                 this.service = new ContainerService(this.em);
