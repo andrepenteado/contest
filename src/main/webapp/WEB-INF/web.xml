@@ -70,11 +70,12 @@
     <url-pattern>*.action</url-pattern>
   </filter-mapping>
 
-  <!-- Acesso do EntityManager pelas Entitys -->
+  <!-- Acesso do EntityManager pelas Entitys somente no glassfish
   <persistence-context-ref>
      <persistence-context-ref-name>contestPU</persistence-context-ref-name>
      <persistence-unit-name>contestPU</persistence-unit-name>
   </persistence-context-ref>
+  -->
 
   <!-- Acesso via tomcat -->
   <resource-ref>
