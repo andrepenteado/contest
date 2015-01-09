@@ -520,7 +520,7 @@ public class VendaFilter<T> extends BasicFilter {
      * Parte do filtro por numero da consulta
      */
     private void adicionarCancelada() {
-        if (cancelada != null) {
+        if (cancelada != null && cancelada) {
             if (classeGenerica.isInstance(new Venda())) {
                 filterDescription.append("AND ( ");
                 filterDescription.append("   v.id IN ( ");

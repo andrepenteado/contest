@@ -1,6 +1,6 @@
 <%@page contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@page errorPage="/comum.erro.action" %>
-<%@taglib uri="http://displaytag.sf.net" prefix="display" %>
+<%@taglib uri="http://github.com/tduchateau/DataTables-taglib" prefix="datatables"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@taglib uri="http://www.mentaframework.org/tags-mtw/" prefix="mtw" %>
@@ -57,96 +57,104 @@
       }
   }
   function darBaixa(id) {
-      document.form_pesquisar_receber.action = '<%=request.getContextPath()%>/financeiro/receber.darBaixa.action?id_receber=' + id;
-      document.form_pesquisar_receber.submit();
+      $("#txt_id").val(id);
+      $("#form_pesquisar_receber").attr("action", "<%=request.getContextPath()%>/financeiro/receber.darBaixa.action");
+      $("#form_pesquisar_receber").submit();
   }
   function alterar(id) {
-      document.form_pesquisar_receber.action = '${linkCadastro}?txt_id=' + id;
-      document.form_pesquisar_receber.submit();
+      $("#txt_id").val(id);
+      $("#form_pesquisar_receber").attr("action", "${linkCadastro}");
+      $("#form_pesquisar_receber").submit();
   }
   function baixarLote() {
-      document.form_pesquisar_receber.action = '${linkBaixarLote}';
-      document.form_pesquisar_receber.submit();
+      $("#form_pesquisar_receber").attr("action", "${linkBaixarLote}");
+      $("#form_pesquisar_receber").submit();
   }
   function gerarBoleto() {
-      document.form_pesquisar_receber.action = '${linkGerarBoleto}';
-      document.form_pesquisar_receber.submit();
+      $("#form_pesquisar_receber").attr("action", "${linkGerarBoleto}");
+      $("#form_pesquisar_receber").submit();
   }
   $(function() {
       $('#tabs').tabs();
       <c:if test="${tabName != null}">
         $('#tabs').tabs('select', '#${tabName}');
       </c:if>
+      $('#receberTable').dataTable({
+         <%@include file="/template/jquery/dataTables/jquery.dataTables.configGrid.js"%>,
+         "aoColumns": [
+             { "bVisible": true },  // Checkbox
+             { "bVisible": false }, // Pedido
+             { "bVisible": false }, // NF
+             { "bVisible": false }, // Documento
+             { "bVisible": true },  // Descrição
+             { "bVisible": true },  // Tipo de Pagamento
+             { "bVisible": false }, // Emissão
+             { "bVisible": true },  // Vencimento
+             { "bVisible": false }, // Total Venda
+             { "bVisible": false }, // No. Parcela
+             { "bVisible": true },  // Valor Parcela
+             { "bVisible": false }, // Valor Recebido
+             { "bVisible": true },  // Valor Devido
+             { "bVisible": false }  // Operações
+          ]
+      });
   });
   </script>
 </head>
 <body>
   <p align="right"><input type="button" value="Nova Conta" onClick="window.location.href='${linkCadastro}'" class="button"></p>
   <form name="form_pesquisar_receber" id="form_pesquisar_receber" method="post" action="${linkPesquisar}">
+  <mtw:input type="hidden" name="txt_id" id="txt_id"/>
+  
   <center>
-
   <%@include file="../../util/pesquisar/receber.jsp"%>
-
   <br>
-  Colunas a exibir: <mtw:checkboxes name="chk_colunas_pesquisa" list="colunasPesquisaContas"/>
 
-  <display:table name="listaReceber" pagesize="${naoPaginar eq '1' ? 1000 : 50}" export="true" id="receber" requestURI="${linkPesquisar}" decorator="org.displaytag.decorator.TotalTableDecorator">
-    <display:column style="text-align: center; white-space: nowrap;">
-      <mtw:input type="checkbox" name="chk_id_receber" id="chk_id_receber" value="${receber.id}"/>
-    </display:column>
-    <c:if test="${pedido eq '1'}">
-      <display:column title="Pedido" sortable="true" style="text-align: center;" headerClass="center">
+  <c:if test="${listaReceber != null}">
+    <datatables:table data="${listaReceber}" htmlTableId="receberTable" dataObjectId="receber">
+      <datatables:column title="#">
+        <mtw:input type="checkbox" name="chk_id_receber" id="chk_id_receber" value="${receber.id}"/>
+      </datatables:column> 
+      <datatables:column title="Pedido" sortable="true">
         <c:if test="${receber.venda != null}">
           ${receber.venda.pedido}
         </c:if>
-      </display:column>
-    </c:if>
-    <c:if test="${nf eq '1'}">
-      <display:column title="NF" sortable="true" style="text-align: center;" headerClass="center">
+      </datatables:column> 
+      <datatables:column title="NF" sortable="true">
         <c:if test="${receber.venda != null && receber.venda.notaFiscal != null}">
           ${receber.venda.notaFiscal.numero}
         </c:if>
-      </display:column>
-    </c:if>
-    <c:if test="${documento eq '1'}">
-      <display:column title="Doc." property="numeroDocumento" sortable="true" style="text-align: center;" headerClass="center"/>
-    </c:if>
-    <display:column title="Descrição" sortable="true">
-      ${receber.descricao == null || receber.descricao == '' ? receber.venda.cliente.nome : receber.descricao}
-    </display:column>
-    <%--<c:if test="${tipo eq '1'}">--%>
-      <display:column title="Tipo" sortable="true">
+      </datatables:column> 
+      <datatables:column title="Doc." property="numeroDocumento" sortable="true"/>
+      <datatables:column title="Descrição" sortable="true">
+        ${receber.descricao == null || receber.descricao == '' ? receber.venda.cliente.nome : receber.descricao}
+      </datatables:column>
+      <datatables:column title="Tipo" sortable="true">
         ${receber.tipoConta == null ? receber.venda.formaPagamento.descricao : receber.tipoConta.descricao}
-      </display:column>
-    <%--</c:if>--%>
-    <c:if test="${emissao eq '1'}">
-      <display:column title="Emissão" sortable="true" style="text-align: center;" headerClass="center">
+      </datatables:column>
+      <datatables:column title="Emissão" sortable="true">
         <c:if test="${receber.venda != null}">
           <fmt:formatDate pattern="dd/MM/yyyy" value="${receber.venda.emissao}"/>
         </c:if>
-      </display:column>
-    </c:if>
-    <c:if test="${vencimento eq '1'}">
-      <display:column title="Vencimento" sortable="true" style="text-align: center;" headerClass="center">
+      </datatables:column>
+      <datatables:column title="Vencimento" sortable="true">
         <fmt:formatDate pattern="dd/MM/yyyy" value="${receber.vencimento}"/>
-      </display:column>
-    </c:if>
-    <c:if test="${totalVenda eq '1'}">
-      <display:column title="Venda" sortable="true" style="text-align: center;" headerClass="center">
+      </datatables:column>
+      <datatables:column title="Venda" sortable="true">
         <c:if test="${receber.venda != null}">
           <fmt:formatNumber pattern="" value="${receber.venda.valorTotal}" minFractionDigits="2"/>
         </c:if>
-      </display:column>
-    </c:if>
-    <display:column title="N&ordm;" property="parcela" style="text-align: center;"/>
-    <display:column title="Parcela" property="valor" sortable="true" format="{0,number,0.00}" style="text-align: right;" headerClass="right" total="true"/>
-    <display:column title="Recebido" property="valorRecebido" sortable="true" format="{0,number,0.00}" style="text-align: right;" headerClass="right" total="true"/>
-    <display:column title="Devido" property="valorDevido" sortable="true" format="{0,number,0.00}" style="text-align: right;" headerClass="right" total="true"/>
-    <display:column title="Operações" style="text-align: center;" headerClass="center">
-      <a href="javascript:alterar(${receber.id});"><img src="images/salvar.png" title="Alterar" border="0"/></a>
-      <a href="javascript:darBaixa(${receber.id});"><img src="images/dar_baixa.png" title="Dar Baixa" border="0"/></a>
-    </display:column>
-  </display:table>
+      </datatables:column> 
+      <datatables:column title="No." property="parcela"/>
+      <datatables:column title="Parcela" property="valor" sortable="true"/> 
+      <datatables:column title="Recebido" property="valorRecebido" sortable="true"/> 
+      <datatables:column title="Devido" property="valorDevido" sortable="true"/> 
+      <datatables:column title="Operações">
+        <a href="javascript:alterar(${receber.id});"><img src="images/salvar.png" title="Alterar" border="0"/></a>
+        <a href="javascript:darBaixa(${receber.id});"><img src="images/dar_baixa.png" title="Dar Baixa" border="0"/></a>
+      </datatables:column> 
+    </datatables:table> 
+  </c:if>
 
   <br>
   <br>

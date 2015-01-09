@@ -72,14 +72,14 @@
               { "bVisible": false }, // Grupo
               { "bVisible": false }, // Tabela de Preços
               { "bVisible": true }, // Custo/Venda Vista
-              { "bVisible": true }, // Custo/Venda Vista
+              { "bVisible": false }, // Custo/Venda Prazo
               <c:if test="${produtoVenda == null}">
                 { "bVisible": true }, // Custo/Venda Vista
-                { "bVisible": true }, // Custo/Venda Vista
+                { "bVisible": false }, // Custo/Venda Prazo
               </c:if>
               <mtw:hasAuthorization groups='<%=KGlobal.CATEGORIA_ADMINISTRATIVO + "," + KGlobal.CATEGORIA_ESTOQUE + "," + KGlobal.CATEGORIA_SUPERUSUARIO%>'>
-                { "bVisible": true }, // In
-                { "bVisible": true }, // Out
+                { "bVisible": false }, // In
+                { "bVisible": false }, // Out
               </mtw:hasAuthorization>
               { "bVisible": true }, // Estoque
               <c:if test="${popup != '1'}">

@@ -734,7 +734,8 @@ CREATE TABLE recebido (
    data_pagamento   DATE          NOT NULL,
    valor_pago       NUMERIC(11,2) NOT NULL,
    forma_pagamento  VARCHAR(20)   NOT NULL,
-   id_caixa         INTEGER       NULL
+   id_caixa         INTEGER       NULL,
+   observacao       TEXT          NULL
 );
 
 ALTER TABLE recebido ADD CONSTRAINT pk_recebido
@@ -907,7 +908,8 @@ CREATE TABLE pago (
    id_pagar         INTEGER       NOT NULL,
    data_pagamento   DATE          NOT NULL,
    valor_pago       NUMERIC(11,2) NOT NULL,
-   forma_pagamento  VARCHAR(20)   NOT NULL
+   forma_pagamento  VARCHAR(20)   NOT NULL,
+   observacao       TEXT          NULL
 );
 
 ALTER TABLE pago ADD CONSTRAINT pk_pago

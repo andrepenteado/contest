@@ -62,6 +62,9 @@ public class Pago extends BasicEntity<Pago> implements Serializable {
     @JoinColumn(name = "id_pagar", nullable = false)
     private Pagar pagar;
 
+    @Column(name = "observacao")
+    private String observacao;
+
     /**
      * @param id id a ser atribuido
      */
@@ -142,6 +145,14 @@ public class Pago extends BasicEntity<Pago> implements Serializable {
      */
     public FormaPagamento getFormaPagamento() {
         return this.formaPagamento;
+    }
+
+    public String getObservacao() {
+        return observacao;
+    }
+
+    public void setObservacao(String observacao) {
+        this.observacao = observacao;
     }
 
     @Override

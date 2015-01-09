@@ -35,7 +35,7 @@
     <tr>
       <td class="label">Tipo</td>
       <td>
-        <mtw:select name="cbo_tipo_conta" id="cbo_tipo_conta" list="tipoConta" defValue="${receber.tipoConta.id}" emptyField="true" />
+        <mtw:select name="cbo_tipo_conta" id="cbo_tipo_conta" list="tipoConta" defValue="${pagar.tipoConta.id}" emptyField="true" />
       </td>
     </tr>
     <tr>
