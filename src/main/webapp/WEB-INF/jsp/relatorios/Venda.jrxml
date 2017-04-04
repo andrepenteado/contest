@@ -70,7 +70,7 @@
 	<field name="valorTotal" class="java.lang.Double">
 		<fieldDescription><![CDATA[venda.valorTotal]]></fieldDescription>
 	</field>
-	<field name="formaPagamento" class="br.com.alphadev.contest.entity.valueObject.FormaPagamento">
+	<field name="formaPagamento" class="com.github.andrepenteado.contest.entity.valueObject.FormaPagamento">
 		<fieldDescription><![CDATA[venda.formaPagamento]]></fieldDescription>
 	</field>
 	<field name="terceiroVencimento" class="java.util.Date">

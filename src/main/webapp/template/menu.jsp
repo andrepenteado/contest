@@ -1,4 +1,4 @@
-<%@page import="br.com.alphadev.contest.KGlobal"%>
+<%@page import="com.github.andrepenteado.contest.KGlobal"%>
 <%@page import="org.mentawai.action.BaseLoginAction"%>
 <%@taglib uri="http://www.mentaframework.org/tags-mtw/" prefix="mtw"%>
 

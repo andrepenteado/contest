@@ -1,4 +1,4 @@
-<%@page import="br.com.alphadev.contest.KGlobal"%>
+<%@page import="com.github.andrepenteado.contest.KGlobal"%>
 <%@page contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@page errorPage="/comum.erro.action" %>
 <%@taglib uri="http://displaytag.sf.net" prefix="display" %>

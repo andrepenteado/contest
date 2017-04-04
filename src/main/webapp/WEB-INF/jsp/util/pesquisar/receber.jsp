@@ -1,4 +1,4 @@
-<%@page import="br.com.alphadev.contest.KGlobal"%>
+<%@page import="com.github.andrepenteado.contest.KGlobal"%>
 
 <c:set var="pesquisarNumero"><%=KGlobal.TipoPesquisaReceber.NUMERO%></c:set>
 <c:set var="pesquisarCliente"><%=KGlobal.TipoPesquisaReceber.CLIENTE%></c:set>

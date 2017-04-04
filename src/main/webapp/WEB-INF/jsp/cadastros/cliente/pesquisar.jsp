@@ -3,7 +3,7 @@
 <%@taglib uri="http://www.mentaframework.org/tags-mtw/" prefix="mtw" %>
 <%@taglib prefix="datatables" uri="http://github.com/tduchateau/DataTables-taglib" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@page import="br.com.alphadev.contest.KGlobal"%><html>
+<%@page import="com.github.andrepenteado.contest.KGlobal"%><html>
 
 <c:set var="popup"><%=request.getParameter("popup")%></c:set>
 <c:set var="linkCadastro"><%=request.getContextPath()%>/cadastros/cliente.cadastro.action</c:set>

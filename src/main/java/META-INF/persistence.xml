@@ -6,13 +6,13 @@
     xmlns="http://java.sun.com/xml/ns/persistence">
 
    <!-- Tomcat via JNDI
-   <persistence-unit name="br.com.alphadev.core.Connection" transaction-type="RESOURCE_LOCAL">
+   <persistence-unit name="com.github.andrepenteado.core.Connection" transaction-type="RESOURCE_LOCAL">
       <non-jta-data-source>java:/comp/env/jdbc/contest-postgresql</non-jta-data-source>
    </persistence-unit>
    -->
 
    <!-- DESKTOP -->
-   <persistence-unit name="br.com.alphadev.core.Connection" transaction-type="RESOURCE_LOCAL">
+   <persistence-unit name="com.github.andrepenteado.core.Connection" transaction-type="RESOURCE_LOCAL">
       <properties>
          <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
          <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/contest" />

@@ -16,7 +16,7 @@
 	<field name="descricao" class="java.lang.String">
 		<fieldDescription><![CDATA[produto.descricao]]></fieldDescription>
 	</field>
-	<field name="unidade" class="br.com.alphadev.contest.entity.valueObject.Unidade">
+	<field name="unidade" class="com.github.andrepenteado.contest.entity.valueObject.Unidade">
 		<fieldDescription><![CDATA[produto.unidade]]></fieldDescription>
 	</field>
 	<field name="quantidade" class="java.lang.Integer">

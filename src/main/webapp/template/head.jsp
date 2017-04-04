@@ -1,4 +1,4 @@
-<%@page import="br.com.alphadev.util.ConfigHelper"%>
+<%@page import="com.github.andrepenteado.util.ConfigHelper"%>
 
 <!-- Título -->
 <title>:: <%=ConfigHelper.get().getString("sistema.nome")%> :: <sitemesh:write property='title' /></title>

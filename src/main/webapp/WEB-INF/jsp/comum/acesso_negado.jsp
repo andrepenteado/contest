@@ -1,6 +1,6 @@
 <%@page contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@page errorPage="/comum.erro.action" %>
-<%@page import="br.com.alphadev.util.ConfigHelper" %>
+<%@page import="com.github.andrepenteado.util.ConfigHelper" %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

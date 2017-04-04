@@ -17,13 +17,13 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <listener>
-    <listener-class>br.com.alphadev.web.ServletInitListener</listener-class>
+    <listener-class>com.github.andrepenteado.web.ServletInitListener</listener-class>
   </listener>
 
   <!-- Somente habilitar o filtro caso de producao em tomcat -->
   <filter>
     <filter-name>ServiceConnectionFilter</filter-name>
-    <filter-class>br.com.alphadev.web.ApplicationServiceFilter</filter-class>
+    <filter-class>com.github.andrepenteado.web.ApplicationServiceFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>ServiceConnectionFilter</filter-name>
@@ -34,7 +34,7 @@
   <filter>
     <filter-name>Sitemesh</filter-name>
     <filter-class>
-      br.com.alphadev.contest.ContestSkinSelector
+      com.github.andrepenteado.contest.ContestSkinSelector
     </filter-class>
   </filter>
   <filter-mapping>
@@ -48,7 +48,7 @@
     <servlet-class>org.mentawai.core.Controller</servlet-class>
     <init-param>
       <param-name>applicationManager</param-name>
-      <param-value>br.com.alphadev.contest.ActionsManager</param-value>
+      <param-value>com.github.andrepenteado.contest.ActionsManager</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
@@ -91,7 +91,7 @@
     <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
     <init-param>
       <param-name>com.sun.jersey.config.property.packages</param-name>
-      <param-value>br.com.alphadev.domain</param-value>
+      <param-value>com.github.andrepenteado.domain</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>

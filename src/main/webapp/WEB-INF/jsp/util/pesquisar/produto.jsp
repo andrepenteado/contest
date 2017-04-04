@@ -1,4 +1,4 @@
-<%@page import="br.com.alphadev.contest.KGlobal"%>
+<%@page import="com.github.andrepenteado.contest.KGlobal"%>
 
 <c:set var="pesquisarCodigoReferenciaDescricao"><%=KGlobal.TipoPesquisaProduto.CODIGO_REFERENCIA_DESCRICAO%></c:set>
 <c:set var="pesquisarGrupoProduto"><%=KGlobal.TipoPesquisaProduto.GRUPO_PRODUTO%></c:set>

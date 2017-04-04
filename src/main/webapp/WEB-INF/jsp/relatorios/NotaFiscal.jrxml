@@ -10,10 +10,10 @@
 	<parameter name="DiretorioBase" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["e:/projetos/windows/workspace_eclipse/Contest/web/WEB-INF/jsp/relatorios/"]]></defaultValueExpression>
 	</parameter>
-	<field name="cfop" class="br.com.alphadev.contest.entity.CFOP">
+	<field name="cfop" class="com.github.andrepenteado.contest.entity.CFOP">
 		<fieldDescription><![CDATA[cfop]]></fieldDescription>
 	</field>
-	<field name="frete" class="br.com.alphadev.contest.entity.valueObject.Frete">
+	<field name="frete" class="com.github.andrepenteado.contest.entity.valueObject.Frete">
 		<fieldDescription><![CDATA[frete]]></fieldDescription>
 	</field>
 	<field name="transportador" class="java.lang.String">

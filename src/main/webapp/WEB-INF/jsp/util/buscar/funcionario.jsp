@@ -1,4 +1,4 @@
-<%@page import="br.com.alphadev.contest.KGlobal"%>
+<%@page import="com.github.andrepenteado.contest.KGlobal"%>
 
 <script type="text/javascript">
 function popupPesquisarFuncionario() {

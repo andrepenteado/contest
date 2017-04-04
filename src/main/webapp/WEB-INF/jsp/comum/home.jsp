@@ -3,11 +3,11 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page import="org.mentawai.action.BaseLoginAction"%>
-<%@page import="br.com.alphadev.util.ConfigHelper"%>
-<%@page import="br.com.alphadev.contest.entity.Funcionario"%>
-<%@page import="br.com.alphadev.util.UsuarioLogadoWrapper"%>
+<%@page import="com.github.andrepenteado.util.ConfigHelper"%>
+<%@page import="com.github.andrepenteado.contest.entity.Funcionario"%>
+<%@page import="com.github.andrepenteado.util.UsuarioLogadoWrapper"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="br.com.alphadev.contest.entity.Categoria"%>
+<%@page import="com.github.andrepenteado.contest.entity.Categoria"%>
 
 <c:set var="linkDestino"><%=request.getContextPath()%>/comum.carregarModulos.action</c:set>
 
