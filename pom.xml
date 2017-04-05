@@ -3,11 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.andrepenteado</groupId>
-    <artifactId>Contest</artifactId>
+    <artifactId>contest</artifactId>
     <version>6.0</version>
     <packaging>war</packaging>
 
     <name>Contest</name>
+    <description>Sistema de controle e gestão comercial</description>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
@@ -133,5 +134,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
